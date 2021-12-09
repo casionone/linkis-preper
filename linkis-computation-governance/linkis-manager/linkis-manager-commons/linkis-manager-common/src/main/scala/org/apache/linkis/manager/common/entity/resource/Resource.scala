@@ -306,11 +306,11 @@ class YarnResource(val queueMemory: Long, val queueCores: Int, val queueInstance
   }
 
   def add(r: Resource): YarnResource = {
-    new YarnResource(queueMemory + r.queueMemory, queueCores + r.queueCores, queueInstances + r.queueInstances, r.queueName)
+    new YarnResource(queueMemory + r.queueMemory, queueCores + r.queueCores, queueInstances, r.queueName)
   }
 
   def minus(r: Resource): YarnResource = {
-    new YarnResource(queueMemory - r.queueMemory, queueCores - r.queueCores, queueInstances - r.queueInstances, r.queueName)
+    new YarnResource(queueMemory - r.queueMemory, queueCores - r.queueCores, queueInstances, r.queueName)
   }
 
   def multiplied(r: Resource): YarnResource = {
