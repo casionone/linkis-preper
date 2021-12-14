@@ -19,7 +19,8 @@ package org.apache.linkis.common.errorcode;
 
 
 public enum LinkisPublicEnhancementErrorCodeSummary {
-    ;
+    JOBINFO_UPDATE_CAN_RETRY(15100,"job info updated request can be retry", "", "JobHistory");
+
     private int errorCode;
     private String errorDesc;
     private String comment;
